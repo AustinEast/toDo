@@ -2,6 +2,8 @@
 <html ng-app="ToDoApp">
 
 <head>
+    <meta name="description" content="Todo - a simple to-do list and time keeper">
+    <meta name="author" content="Austin East">
     <script src="angular.min.js"></script>
     <script src="scripts.js"></script>
     <link rel="stylesheet" href="styles.css">
@@ -11,11 +13,12 @@
     <main ng-controller="MainCtrl">
         <h1>ToDo</h1>
         <hr>
-         
-                <label class="done-{{todo.done}}" ng-repeat="todo in toDos">
-                    <input type="checkbox" ng-model="todo.done"> {{todo.text}}
+            <div ng-repeat="todo in toDos">
+                <label class="done-{{todo.done}}" >
+                    <input type="checkbox" ng-model="todo.done"> {{todo.text}} - {{todo.hours}}:{{todo.minutes}}:{{todo.seconds}}
                 </label>
-
+                <button>Start</button>
+            </div>
         <form>
             <input type="text" ng-model="formText">
             <button ng-click="addItem()">Add Item</button>

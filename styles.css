@@ -31,11 +31,14 @@ main {
     transition: 1s;
     text-align: center;
 }
-
+div {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
 label {
     padding: 0;
     text-align: left;
-    display: block;
 }
 
 label:hover {
@@ -44,8 +47,9 @@ label:hover {
     transition: 0.3s;
     cursor: pointer;
 }
+div button {
+}
 button {
-	
 	background-color:#e4685d;
 	-moz-border-radius:4px;
 	-webkit-border-radius:4px;
